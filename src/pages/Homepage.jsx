@@ -1,9 +1,12 @@
 import styled from "styled-components";
-
+import { Link } from "react-router-dom";
 const Homepage = () => {
   return (
     <Container>
       <Title>React Design Patterns</Title>
+      <Contents>
+        <StyledLink to="/layout">Split-Screen</StyledLink>
+      </Contents>
     </Container>
   );
 };
@@ -25,5 +28,29 @@ const Title = styled.h1`
   /* Media queries */
   @media screen and (max-width: 600px) {
     font-size: 1.5rem;
+  }
+`;
+const Contents = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10vh;
+  font-family: Arial, Helvetica, sans-serif;
+`;
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  background-color: white;
+  padding: 10px;
+  width: 30vw;
+  border-radius: 30px;
+  text-align: center;
+  transition: box-shadow 400ms ease-out;
+  &:hover {
+    box-shadow: 5px 5px 30px green;
+  }
+  font-size: 1.8rem;
+  @media screen and (max-width: 600px) {
+    font-size: 1rem;
+    width: 60vw;
   }
 `;

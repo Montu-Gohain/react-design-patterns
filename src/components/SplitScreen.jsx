@@ -16,6 +16,9 @@ export default SplitScreen;
 // Todo : ---------- Designs are written here.
 const Wrapper = styled.div`
   display: flex;
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+  }
 `;
 const SideWrapper = styled.div`
   flex: ${(props) => props.weight};

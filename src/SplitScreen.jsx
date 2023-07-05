@@ -2,20 +2,12 @@
 
 import styled from "styled-components";
 
-const SplitScreen = ({
-  left: Left,
-  right: Right,
-  leftWeight = 1,
-  rightWeight = 3,
-}) => {
+const SplitScreen = ({ children, leftWeight = 1, rightWeight = 3 }) => {
+  const [left, right] = children; // Here left and right became elements not components.
   return (
     <Wrapper>
-      <SideWrapper weight={leftWeight}>
-        <Left />
-      </SideWrapper>
-      <SideWrapper weight={rightWeight}>
-        <Right />
-      </SideWrapper>
+      <SideWrapper weight={leftWeight}>{left}</SideWrapper>
+      <SideWrapper weight={rightWeight}>{right}</SideWrapper>
     </Wrapper>
   );
 };

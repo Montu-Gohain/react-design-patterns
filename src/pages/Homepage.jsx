@@ -6,6 +6,8 @@ const Homepage = () => {
       <Title>React Design Patterns</Title>
       <Contents>
         <StyledLink to="/layout">Split-Screen</StyledLink>
+        <StyledLink to="/lists">Displaying List</StyledLink>
+        <StyledLink to="/modal">Modal Page</StyledLink>
       </Contents>
     </Container>
   );
@@ -16,6 +18,7 @@ export default Homepage;
 const Container = styled.div`
   height: 97vh;
   background-color: #c7d2fe;
+  border-radius: 10px 10px 0px 0px;
 `;
 const Title = styled.h1`
   font-size: 2rem;
@@ -32,6 +35,7 @@ const Title = styled.h1`
 `;
 const Contents = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-top: 10vh;
@@ -45,6 +49,8 @@ const StyledLink = styled(Link)`
   border-radius: 30px;
   text-align: center;
   transition: box-shadow 400ms ease-out;
+  margin-bottom: 3vh;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
   &:hover {
     box-shadow: 5px 5px 30px green;
   }

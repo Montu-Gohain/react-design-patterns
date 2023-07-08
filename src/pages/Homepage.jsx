@@ -8,6 +8,7 @@ const Homepage = () => {
         <StyledLink to="/layout">Split-Screen</StyledLink>
         <StyledLink to="/lists">Displaying List</StyledLink>
         <StyledLink to="/modal">Modal Page</StyledLink>
+        <StyledLink to="/container">Container Component</StyledLink>
       </Contents>
     </Container>
   );

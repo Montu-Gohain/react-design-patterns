@@ -4,6 +4,7 @@ import SplitScreenPage from "./pages/SplitScreenPage";
 import { ListPage } from "./pages/ListPage";
 import Homepage from "./pages/Homepage";
 import ModalPage from "./pages/ModalPage";
+import ContainerComponent from "./pages/ContainerComponent";
 const App = () => {
   return (
     <Router>
@@ -12,6 +13,7 @@ const App = () => {
         <Route path="/layout" element={<SplitScreenPage />} />
         <Route path="/lists" element={<ListPage />} />
         <Route path="/modal" element={<ModalPage />} />
+        <Route path="/container" element={<ContainerComponent />} />
       </Routes>
     </Router>
   );

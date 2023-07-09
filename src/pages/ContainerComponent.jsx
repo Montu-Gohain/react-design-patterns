@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 // import CurrentUserLoader from "../components/CurrentUserLoader";
 import UserInfo from "../components/ContainerComponents/UserInfo";
 // import UserLoader from "../components/UserLoader";
@@ -8,6 +9,13 @@ import axios from "axios";
 
 const userUrl = "http://localhost:6060/api/user";
 const productUrl = "http://localhost:6060/api/product";
+// Todo : Adding localstorage functionality
+
+const getLocalstorageData = (key) => () => {
+  return localStorage.getItem(key);
+};
+
+const Text = ({ message }) => <h2>{message}</h2>;
 
 const ContainerComponent = () => {
   return (
@@ -18,6 +26,12 @@ const ContainerComponent = () => {
       <ResourceLoader resourceName={"product"} resourceUrl={`${productUrl}/2`}>
         <ProductInfo />
       </ResourceLoader> */}
+      <DataSource
+        getDataFunc={getLocalstorageData("message")}
+        resourceName="message"
+      >
+        <Text />
+      </DataSource>
       <DataSource
         getDataFunc={async () => {
           const response = await axios.get(`${userUrl}/2`);

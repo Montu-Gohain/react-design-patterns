@@ -23,7 +23,7 @@ const Container = styled.div`
 `;
 const Title = styled.h1`
   font-size: 2rem;
-  font-family: "system-ui";
+  font-family: "Inter", sans-serif;
   text-align: center;
   background-color: #2563eb;
   color: aliceblue;
@@ -40,7 +40,8 @@ const Contents = styled.div`
   align-items: center;
   justify-content: center;
   margin-top: 10vh;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
 `;
 const StyledLink = styled(Link)`
   text-decoration: none;
@@ -56,7 +57,7 @@ const StyledLink = styled(Link)`
   &:hover {
     box-shadow: 5px 5px 30px green;
   }
-  font-size: 1.8rem;
+  font-size: 18px;
   @media screen and (max-width: 600px) {
     font-size: 1rem;
     width: 60vw;

@@ -18,7 +18,7 @@ export default Homepage;
 // Todo : Defining Styles here.
 const Container = styled.div`
   height: 97vh;
-  background-color: #c7d2fe;
+  background-color: #222831;
   border-radius: 10px 10px 0px 0px;
 `;
 const Title = styled.h1`
@@ -48,6 +48,7 @@ const StyledLink = styled(Link)`
   padding: 10px;
   width: 30vw;
   border-radius: 30px;
+  color: #212121;
   text-align: center;
   transition: box-shadow 400ms ease-out;
   margin-bottom: 3vh;
